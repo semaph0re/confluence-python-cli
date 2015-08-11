@@ -268,13 +268,13 @@ def Parser():
     parser_changepass.add_argument("-U", "--newusername", help="Username to perform action on.", required=True)
     parser_changepass.add_argument("-X", "--userpassword", help="Password for user", required=True)
 
-    parser_addgroup = subparsers.add_parser('addgroup', help='Add a goup')
+    parser_addgroup = subparsers.add_parser('addgroup', help='Add a group')
     parser_addgroup.add_argument("-G", "--groupname", help="Group name to perform action on.", required=True)
 
-    parser_removegroup = subparsers.add_parser('removegroup', help='Remove a goup')
+    parser_removegroup = subparsers.add_parser('removegroup', help='Remove a group')
     parser_removegroup.add_argument("-G", "--groupname", help="Group name to perform action on.", required=True)
 
-    parser_listgroups = subparsers.add_parser('listgroups', help='List all goup')
+    parser_listgroups = subparsers.add_parser('listgroups', help='List all groups')
 
     parser_usersgroups = subparsers.add_parser('listusers', help='List all users')
 
