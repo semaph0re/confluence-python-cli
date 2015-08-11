@@ -352,7 +352,7 @@ def Actions(token,xml_server,args,content):
                 all_pages = ConfluenceSpace(token,xml_server).get_all_pages(space['key'])
                 for page in all_pages:
                     print args.delimiter.join((
-                     page['id'], page['space'], page['parentId'], page['title'], page['url']))
+                     page['id'], page['space'], page['parentId'], page['title'].encode('ascii', 'ignore'), page['url']))
 
         elif args.action == "removepage":
             removed_page = ConfluencePage(token,xml_server,args.name,args.spacekey,"").remove()
